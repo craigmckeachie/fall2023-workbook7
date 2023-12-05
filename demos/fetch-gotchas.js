@@ -3,8 +3,8 @@ fetch("http://jsonplaceholder.typicode.com/users/1")
     console.log(response.status);
     return response.json(); //must have return if function is more than one line
   })
-  .then((data) => {
-    console.log(data.name);
-    console.log(data.email);
-    console.log(data.website);
+  .then((user) => {
+    console.log(user.name);
+    console.log(user.email);
+    console.log(user.website);
   });
