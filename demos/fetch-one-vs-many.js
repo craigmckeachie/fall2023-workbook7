@@ -1,6 +1,8 @@
 fetch("https://jsonplaceholder.typicode.com/users")
   .then((response) => response.json())
   .then((usersArray) => {
+
+  
     console.log(usersArray);
   });
 
