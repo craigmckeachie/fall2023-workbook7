@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <main class="container mt-4"></main>
+    <script>
+      const main = document.querySelector("main");
+
+      let course = {
+        id: 1,
+        dept: "CompSci",
+        courseNum: 101,
+        courseName: "HTML5 and CSS3",
+        instructor: "Rob",
+        startDate: "July 8",
+        numDays: 10,
+      };
+
+      function generateBootstrapCard(title, subtitle, content, width) {
+        // Create card container
+        var card = document.createElement("div");
+        card.className = "card";
+
+        //Set card width
+        card.style.width = width + "rem";
+
+        // Create card body
+        var cardBody = document.createElement("div");
+        cardBody.className = "card-body";
+
+        // Create card title
+        var cardTitle = document.createElement("h5");
+        cardTitle.className = "card-title";
+        cardTitle.textContent = title;
+
+        // Create card subtitle
+        var cardSubtitle = document.createElement("h6");
+        cardSubtitle.className = "card-subtitle mb-2 text-muted";
+        cardSubtitle.textContent = subtitle;
+
+        // Create card content
+        var cardContent = document.createElement("p");
+        cardContent.className = "card-text";
+        cardContent.textContent = content;
+
+        // Append title, subtitle, and content to the card body
+        cardBody.appendChild(cardTitle);
+        cardBody.appendChild(cardSubtitle);
+        cardBody.appendChild(cardContent);
+
+        // Append card body to the card
+        card.appendChild(cardBody);
+
+        return card;
+      }
+
+      const card = generateBootstrapCard(course.courseName, course.dept, `Starts: ${course.startDate}`, 18);
+      main.appendChild(card);
+    </script>
+  </body>
+</html>
