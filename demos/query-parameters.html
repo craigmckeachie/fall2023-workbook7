@@ -16,9 +16,12 @@
     <script>
       console.log("location", window.location);
       console.log("search", window.location.search);
+      
+      //create params object using the current location (address bar)
       let params = new URLSearchParams(window.location.search);
       console.log("params", params);
 
+      //get/read a parameter from the params object
       let id = params.get("id");
       console.log(id);
 
