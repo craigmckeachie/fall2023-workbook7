@@ -21,7 +21,10 @@ function loadTableBody(courses) {
     //inside the row create a table cell (td)
     //put the course name inside the table cell
     let cell3 = row.insertCell();
-    cell3.innerText = course.courseName;
+    let anchor = document.createElement("a");
+    anchor.href = `details.html?courseid=${course.id}`;
+    anchor.text = course.courseName;
+    cell3.appendChild(anchor);
 
     //inside the row create a table cell (td)
     //put the course department name inside the table cell
