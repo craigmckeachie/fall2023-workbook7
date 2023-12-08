@@ -1,1 +1,1 @@
-GET http://jsonplaceholder.typicode.com/users
+GET http://localhost:8081/api/courses/

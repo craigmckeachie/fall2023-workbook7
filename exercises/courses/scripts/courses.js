@@ -30,19 +30,33 @@ function loadTableBody(courses) {
   }
 }
 
+//loading data into memory,
+//more specifically taking the json string in the body of the response
+// and turning it into a javascript array or a javascript object
+function loadItBackIntoMemory(response) {
+  return response.json();
+}
+
+function displayData(data) {
+  loadTableBody(data);
+}
+
+// function displayArray(array) {
+//   loadTableBody(array);
+// }
+
+// function displayObject(object) {
+//   console.log(object);
+// }
+
 //what to do initially after the web page loads all the html
 function initialize() {
   fetch("http://localhost:8081/api/courses")
-    .then((response) => response.json())
-    .then((courses) => {
-      loadTableBody(courses);
-    });
+    //when you receive the response object, call the function in the then..passing it the response object
+    .then(loadItBackIntoMemory)
+    //when you have the response body turned into data, call the function in the then...passing it the data
+    .then(displayData);
 }
 
 //wiring up or telling the web page to call the initialize function after the html has been loaded
 window.onload = initialize;
-
-
-
- 
-
