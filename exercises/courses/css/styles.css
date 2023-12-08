@@ -3,3 +3,12 @@ td,
 th {
   padding: 0.4rem;
 }
+
+table {
+  border-collapse: collapse;
+  text-align: center;
+}
+
+tr {
+  border: 1px solid red;
+}
