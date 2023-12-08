@@ -14,11 +14,6 @@ function loadTableBody(courses) {
     let row = coursesTableBody.insertRow();
 
     //inside the row create a table cell (td)
-    //put the course department name inside the table cell
-    let cell1 = row.insertCell();
-    cell1.innerText = course.dept;
-
-    //inside the row create a table cell (td)
     //put the course number inside the table cell
     let cell2 = row.insertCell();
     cell2.innerText = course.courseNum;
@@ -27,6 +22,11 @@ function loadTableBody(courses) {
     //put the course name inside the table cell
     let cell3 = row.insertCell();
     cell3.innerText = course.courseName;
+
+    //inside the row create a table cell (td)
+    //put the course department name inside the table cell
+    let cell1 = row.insertCell();
+    cell1.innerText = course.dept;
   }
 }
 

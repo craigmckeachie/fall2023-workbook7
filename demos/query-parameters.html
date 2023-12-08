@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Query Params</title>
+  </head>
+  <body>
+    <main>
+      <a href="query-parameters.html?id=1">id</a> 
+      <br>
+      <a href="query-parameters.html?id=1&type=comedy">id and type</a>
+      <br>
+      <button id="addParamButton">Add Param</button>
+    </main>
+    <script>
+      console.log("location", window.location);
+      console.log("search", window.location.search);
+      let params = new URLSearchParams(window.location.search);
+      console.log("params", params);
+
+      let id = params.get("id");
+      console.log(id);
+
+      if (params.has("type")) {
+        let type = params.get("type");
+        console.log(type);
+      }
+
+    //   let addParamButton = document.querySelector("#addParamButton")
+    //   addParamButton.onclick = function addParam(){
+    //     params.set("action", "save")
+       
+    //   }
+
+
+
+
+    </script>
+  </body>
+</html>

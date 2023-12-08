@@ -1,7 +1,12 @@
-tr,
-td,
-th {
-  padding: 0.6rem;
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;600&display=swap");
+
+body {
+  font-family: "Raleway", sans-serif;
+}
+
+main {
+  padding-block: 2rem;
+  padding-inline: 5rem;
 }
 
 table {
@@ -11,4 +16,9 @@ table {
 
 tr {
   border-bottom: 1px solid #ddd;
+}
+
+td,
+th {
+  padding: 0.6rem;
 }
